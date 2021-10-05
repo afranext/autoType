@@ -1,7 +1,7 @@
 
 # AutoType
 
-AutoType is a simple text expander for Linux. It is sort of like Autokey or Texpander,  Unlike them, AutoType types texts instead of copying them (This will help you to use it in your screenshots or instructional videos). 
+AutoType is a simple text expander for Linux. It is sort of like Autokey or Texpander.  Unlike them, AutoType types texts instead of copying them (This will help you to use it in your screencasts or instructional videos). 
 AutoType is a python3 script that uses pyautogui to let you select a text file, and it types that to everywhere you want.
 
 ## Installation
