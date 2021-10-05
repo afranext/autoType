@@ -10,6 +10,10 @@ def adapt_files(file_path):
     return os.path.basename(os.path.normpath(file_path))
 
 
+def app_path(path=None):
+    return os.path.expanduser("~") + "/AutoTypeFiles/" + path
+
+
 class Widget(QWidget):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -24,7 +28,7 @@ class Widget(QWidget):
         self.current_text = None
 
         self.combo = QComboBox(self)
-        files_paths = glob.glob("/home/ali/AutoType/*")
+        files_paths = glob.glob(app_path("/*"))
         files_paths.insert(0, "Select a file")
         files_names = list(map(adapt_files, files_paths))
         self.combo.addItems(files_names)
@@ -43,7 +47,7 @@ class Widget(QWidget):
 
     def on_click(self):
         self.close()
-        opened_file = open("/home/ali/AutoType/" + self.current_text, "r")
+        opened_file = open(app_path() + self.current_text, "r")
         time.sleep(1)
         for character in opened_file.read():
             pyautogui.typewrite(character)
