@@ -26,7 +26,7 @@ If those aren't already installed on your system you can install them from pip p
 
 ```
 pip install PyQt5 
-sudo apt install pyautogui 
+pip install pyautogui 
 ```
 
 ## Usage
