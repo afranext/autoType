@@ -10,7 +10,7 @@ def adapt_files(file_path):
     return os.path.basename(os.path.normpath(file_path))
 
 
-def app_path(path=None):
+def app_path(path=''):
     return os.path.expanduser("~") + "/AutoTypeFiles/" + path
 
 
